@@ -1,3 +1,21 @@
 body{
     margin: 0;
+    background-color: black;
+    color: linen;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div{
+    border: 1px dotted lightcoral;
+    margin: 1em;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 2em;
+}
+
+.nav-main{
+    text-align: center;
 }
