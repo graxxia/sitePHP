@@ -49,6 +49,8 @@ class User{
 
     static function loginWithPass($username, $pass){
 
+        ///check database
+
     }
 
 
