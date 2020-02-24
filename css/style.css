@@ -7,7 +7,7 @@ body{
 
 div{
     border: 1px dotted lightcoral;
-    margin: 1em;
+    
 }
 
 li{
@@ -17,5 +17,19 @@ li{
 }
 
 .nav-main{
+    width: 100%;
     text-align: center;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-main > ul{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo > img{
+    width: 150px;
+    height: auto;
+    cursor: pointer;
 }
