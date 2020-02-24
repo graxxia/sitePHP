@@ -3,7 +3,7 @@
     include('./inc/Menu.php');
     include('./inc/DbConn.php');
 
-    DbConn::init("127.0.0.1",'root','pass','utf8','rose');
+    DbConn::init("127.0.0.1",'bob','bobbobby','utf8','rose');
     $pdo = DbConn::getPDO();
 ?>
 
