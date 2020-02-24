@@ -1,21 +1,48 @@
-body{
-    margin: 0;
-    background-color: black;
-    color: linen;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+	margin: 0;
+	background-color: rgb(102, 118, 90);
+	color: linen;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-div{
-    border: 1px dotted lightcoral;
-    margin: 1em;
+div {
+	border: 1px dotted rgb(126, 145, 112);
 }
 
-li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 2em;
+li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 1em;
 }
 
-.nav-main{
-    text-align: center;
+.nav-main {
+	width: 100%;
+	margin-top: 1em;
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+}
+
+.nav-main > ul {
+	margin: 0;
+}
+
+li > a {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: small;
+	letter-spacing: 0.5em;
+}
+
+#logo > img {
+	width: 110px;
+	height: auto;
+	cursor: pointer;
+	margin-left: 2em;
+}
+
+footer {
+	font-size: 0.7em;
+	text-transform: uppercase;
 }
