@@ -4,9 +4,7 @@
 class Menu{
     //members
     public $id; //main-menu
-
     private $items =[];
-
     private $sortDesc = true;
 
     function __construct($id){
@@ -35,7 +33,6 @@ class Menu{
         });
     }
 
-
 //default needs to go at the end "$order=0 "
     public function addItem($text, $page, $order=0){
         //cleanup page (key) // replace espaces for no espace
@@ -46,8 +43,7 @@ class Menu{
         $this->sortMenu(); 
     }
 
-    //page, text, order (of menu items), active (what page we are on)
-
+//page, text, order (of menu items), active (what page we are on)
     public function render(){
         $strOut ="<ul id=\"{$this->id}\">";
         foreach ($this->items as $k => $v) {
@@ -55,10 +51,7 @@ class Menu{
         }
         $strOut .= "</ul>";
         return $strOut;
-
     }
-
 }
-
 
 ?>

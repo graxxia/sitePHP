@@ -1,52 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css"/>
-</head>
-<body>
-<nav>
+<link rel="stylesheet" href="./css/style.css"/>
+<?php
+    include('./inc/Menu.php');
+    include('./inc/DbConn.php');
 
-<div class="nav-main">
-    <div id="logo"> 
-    <img src="./img/roselogo-w.svg" alt="RoseLogo">
+    DbConn::init("127.0.0.1",'root','pass','utf8','rose');
+    $pdo = DbConn::getPDO();
+?>
+
+<nav>
+    <div class="nav-main">
+    <div id="logo">
+    <img src="./img/roselogo-w.svg" alt="Rose Logo">
     </div>
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
+            <li>
+                <?php
+                //the number is the order in the menu -browser-
+                    $menuObj = new Menu("nav-menu");
+                    $menuObj->addItem("Home","default");
+                    $menuObj->addItem("About","about");
+                    $menuObj->addItem("Products","products");
+                    $menuObj->addItem("Log In","login");
+                    $menuObj->setDesc(false);
+                    echo $menuObj->render();
+                ?>
+            </li>
+        <ul>
+    </div>
 </nav>
 
 <main>
-<div class="main-content">
-
-<?php
-include('./content/about.php');
-?>
+    <div class="main-content">
+        <?php
+        include('./user/user.php');
+        ?>
 </div>
 </main>
 
 <footer>
     <div class="footer-main">
-        <p> Footer</p>
+        <p> &copy <?php echo date('Y');?> Rose Skin Solutions</p>
     </div>
 </footer>
     
 </body>
 </html>
 
-
 <?php
-include('./inc/menu.php');
-include('./inc/header.php');
+    $qGetVisit = $pdo->query('SELECT count(*) as `cnt` FROM `visits`');
+    //add visit to data
+    while($row = $qGetVisit->fetch()){
+       // echo "<br/>{$row['cnt']}";
+    }
 ?>
-
-
-
-<?php
-
-include('./inc/side.php');
-include('./inc/footer.php');
