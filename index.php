@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="./css/style.css"/>
+<link rel="stylesheet" href="./css/user.css"/>
 <?php
     require_once('./inc/init.php');
 ?>
@@ -46,9 +47,7 @@
 
     <div id="user-content">
         <h4>Log In User </h4>
-        <?php
-//WHERE DO I NEED TO INVLUDE THE FORM FOR USER????
-        ?>
+
     </div>      
     </div>
 </main>

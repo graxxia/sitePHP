@@ -1,6 +1,5 @@
 <?php
 require_once('../inc/init.php');
-
 ?>
 
 <h3>Sign Up </h3>

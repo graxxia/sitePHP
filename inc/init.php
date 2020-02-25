@@ -3,7 +3,7 @@
     require_once($dir.'/inc/DbConn.php');
     DbConn::init("127.0.0.1",'root','','utf8','rose');
     require_once($dir.'/inc/Menu.php');
-    require_once($dir.'/user/User.php');
+    require_once($dir.'/inc/User.php');
     $pdo = DbConn::getPDO();
    
 $res = null;

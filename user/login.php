@@ -1,5 +1,5 @@
 <?php
-require_once('./inc/init.php');
+require_once('../inc/init.php');
 
     if(isset($res)){
         echo $res['msg'];
@@ -8,6 +8,7 @@ require_once('./inc/init.php');
 ?>
 
 <div class="login-form">
+    <!-- <form action="?p=login" method="post"> -->
     <form action="login.php" method="post">
         <input type="hidden" name="action" value="login"/>
         <div>Username: </div> 
