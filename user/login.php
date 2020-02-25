@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 require_once('./inc/init.php');
 
@@ -19,3 +20,20 @@ require_once('./inc/init.php');
         <div><input type="submit" value="Login" name="submit" /></div>
 </div>
 
+=======
+<?php
+require_once('../inc/init.php');
+
+    if(isset($user)){
+        echo $user['msg'];
+    }
+
+?>
+
+<a href="../user/login.php?logout">logout</a>
+
+
+<?php
+include('../inc/userManage.php');
+?>
+>>>>>>> web
