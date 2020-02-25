@@ -1,11 +1,12 @@
 <?php
 require_once('../inc/init.php');
+include('../inc/userManage.php');
 ?>
 
 <h3>Sign Up </h3>
 <?php
-    if(isset($res)){
-        echo $res['msg'];
+    if(isset($user)){
+        echo $user['user']['name'].':'.$user['msg'];
     }
 
     if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['pass_reenter']) &&($_POST['pass'] === $_POST['pass_reenter'])){

@@ -1,11 +1,15 @@
 <?php
 require_once('../inc/init.php');
 
-    if(isset($res)){
-        echo $res['msg'];
+    if(isset($user)){
+        echo $user['msg'];
     }
 
-    header("location:");
-    exit;
+?>
 
+<a href="../user/login.php?logout">logout</a>
+
+
+<?php
+include('../inc/userManage.php');
 ?>

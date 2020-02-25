@@ -3,6 +3,16 @@
 
 class User{
 
+    static function getAll(){
+        $pdo = DbConn::getPDO();
+        $r = $pdo->query("SELECT `userID`, `username` FROM `users`");
+        $results =[];
+        while($row = $r->fetch()){
+            $results[] = $row;
+        }
+        return $results;
+    }
+
     static function theUser($username){
         $pdo = DbConn::getPDO();//reference to query
         //SELECT * FROM `users` WHERE username = 'Alejandro'
@@ -59,7 +69,7 @@ class User{
                 $cookieHash = password_hash($cookie, PASSWORD_BCRYPT);
                 $pdo->query("UPDATE `users` SET `cookieHash` = '$cookieHash' WHERE `username` = '$username';");
 
-                return ['msg'=>"$username logged in", 'status'=>true,'cookie'=>$cookie];
+                return ['msg'=>"$username logged in", 'status'=>true,'cookie'=>$cookie, 'user'=>$row];
             }
         }
         return ['msg'=>"Could not log in", 'status'=>false];      
