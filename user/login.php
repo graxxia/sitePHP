@@ -5,18 +5,7 @@ require_once('../inc/init.php');
         echo $res['msg'];
     }
 
+    header("location:");
+    exit;
+
 ?>
-
-<div class="login-form">
-    <!-- <form action="?p=login" method="post"> -->
-    <form action="login.php" method="post">
-        <input type="hidden" name="action" value="login"/>
-        <div>Username: </div> 
-        <div><input type="text" name="username"></div>
-            
-        <div>Password: </div> 
-        <input type="password" name="pass"/>
-
-        <div><input type="submit" value="Login" name="submit" /></div>
-</div>
-
