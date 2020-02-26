@@ -59,7 +59,6 @@
     
     <aside>
         <div class="side-main">
-        <p> Side</p>
             <div id="user-createaccount">
             <a href="?p=createaccount" class="button">Create an account </a>   
  
@@ -81,7 +80,8 @@
 <?php
     $qGetVisit = $pdo->query('SELECT count(*) as `cnt` FROM `visits`');
     //add visit to data
+    //no visits, commented out until implemented
     while($row = $qGetVisit->fetch()){
-        echo "<br/>{$row['cnt']}";
+     //   echo "<br/>{$row['cnt']}";
     }
 ?>
