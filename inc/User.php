@@ -123,7 +123,7 @@ class User{
               $row = $q->fetch();
 
               if(password_verify($cookie, $row['cookieHash'] )) {
-              return ['msg'=>"$username logged in", 'status'=>true,'cookie'=>$cookie];  
+              return ['msg'=>"$username logged in", 'status'=>true,'cookie'=>$cookie, 'user'=>$row];  
             }
         }
         return ['msg'=>"Could not log in", 'status'=>false];

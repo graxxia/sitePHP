@@ -25,6 +25,7 @@ if(isset($res) && $res['status'] === true) {
     DbConn::init("127.0.0.1",'root','','utf8','rose');
     require_once($dir.'/inc/Menu.php');
     require_once($dir.'/inc/User.php');
+    require_once($dir.'/inc/Product.php');
     $pdo = DbConn::getPDO();
    
 $user = null;
