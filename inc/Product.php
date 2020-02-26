@@ -4,7 +4,7 @@ class Product{
 
     static function getAll(){
         $pdo = DbConn::getPDO();
-        $r = $pdo->query("SELECT `productID`, `name`, `description`, `unitProce`,`picture` FROM `product`");
+        $r = $pdo->query("SELECT `productID`, `name`, `description`, `unitPrice`,`picture` FROM `product`");
         $products =[];
         while($row = $r->fetch()){
             $products[] = $row;
@@ -14,7 +14,7 @@ class Product{
 
     static function getAllType($typeID){
         $pdo = DbConn::getPDO();
-        $r = $pdo->prepare("SELECT `productID`, `name`, `description`, `unitProce`,`picture` FROM `product` WHERE `productTypeID` = ?");
+        $r = $pdo->prepare("SELECT `productID`, `name`, `description`, `unitPrice`,`picture` FROM `product` WHERE `productTypeID` = ?");
         $r->execute([$typeID]);
         $products =[];
         while($row = $r->fetch()){
@@ -25,7 +25,7 @@ class Product{
 
     static function getAllCategory($categoryID){
         $pdo = DbConn::getPDO();
-        $r = $pdo->prepare("SELECT `productID`, `name`, `description`, `unitProce`,`picture` FROM `product` WHERE `productCategoryID` = ?");
+        $r = $pdo->prepare("SELECT `productID`, `name`, `description`, `unitPrice`,`picture` FROM `product` WHERE `productCategoryID` = ?");
         $r->execute([$categoryID]);
         $products =[];
         while($row = $r->fetch()){
