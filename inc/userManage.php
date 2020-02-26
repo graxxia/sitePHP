@@ -8,7 +8,7 @@
          
      }else{   
 ?>
-        Not logget in <a href="../user/login.php">Login</a>
+        Not logget in <a href="?p=login">Login</a>
 
     <?php }  ?>
 </div>
