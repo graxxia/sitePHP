@@ -7,9 +7,12 @@ require_once('../inc/init.php');
 
 ?>
 
-<a href="../user/login.php?logout">logout</a>
+
+<!-- <a href="../user/login.php?logout">logout</a> -->
+
+<a href="?p=home">logout</a>
 
 
 <?php
-include('../inc/userManage.php');
+include('./inc/userManage.php');
 ?>

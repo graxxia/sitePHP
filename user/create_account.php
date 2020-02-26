@@ -1,6 +1,5 @@
 <?php
-require_once('../inc/init.php');
-include('../inc/userManage.php');
+include('./inc/userManage.php');
 ?>
 
 <h3>Sign Up </h3>
@@ -14,7 +13,7 @@ include('../inc/userManage.php');
         echo $result['msg'];
     }else {
 ?>
-    <form action="create_account.php" method="post">
+    <form action="" method="post">
     <div class="form-signin">
         <div>Username: </div> 
         <div><input type="text" name="username"></div>
