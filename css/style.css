@@ -1,48 +1,232 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
 body {
 	margin: 0;
-	background-color: rgb(102, 118, 90);
-	color: linen;
-	font-family: Arial, Helvetica, sans-serif;
+	color: rgb(59, 58, 58);
+	font-family: "Roboto", sans-serif;
 }
 
-div {
-	border: 1px dotted rgb(126, 145, 112);
-}
+/*------------general---------------*/
 
-li {
-	list-style: none;
-	display: inline-block;
-	margin: 0 1em;
-}
-
-.nav-main {
+#img-home img {
 	width: 100%;
-	margin-top: 1em;
-	text-align: center;
-	display: inline-flex;
-	align-items: center;
+	height: auto;
 }
 
-.nav-main > ul {
-	margin: 0;
-}
-
-li > a {
-	text-decoration: none;
-	color: white;
-	text-transform: uppercase;
-	font-size: small;
-	letter-spacing: 0.5em;
+.mainheader {
+	display: flex;
+	justify-content: center;
 }
 
 #logo > img {
 	width: 110px;
 	height: auto;
 	cursor: pointer;
-	margin-left: 2em;
+	margin: 1em 0 0 0;
+}
+
+/*--------------nav menu-------------*/
+
+.nav-main span:hover {
+	background-color: rgb(175, 175, 175);
+	color: rgb(59, 58, 58);
+	font-weight: bolder;
+}
+
+.nav-main ul {
+	list-style-type: none;
+}
+
+.nav-main a {
+	text-decoration: none;
+	color: rgb(59, 58, 58);
+	text-transform: uppercase;
+	font-size: small;
+	letter-spacing: 0.5em;
+}
+
+.nav-main a:focus,
+.nav-main:hover {
+}
+nav {
+	display: flex;
+	justify-content: center;
+}
+
+.nav-main li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 1em;
+}
+
+.nav-main a:hover,
+.nav-main a:focus {
+	color: rgb(35, 187, 177);
+}
+
+/* ------------end nav-----------*/
+
+.main-content h1,
+h2,
+h3,
+h5,
+h6 {
+	line-height: 1.7em;
+	clear: both;
+	color: rgb(35, 187, 177);
+	justify-content: center;
+	text-align: center;
+}
+
+p {
+	line-height: 1.7em;
+}
+
+#login-control {
+	position: relative;
+	right: -15em;
+	align-self: center;
+	text-transform: uppercase;
+	font-size: small;
+}
+
+#login-control a {
+	color: rgb(35, 187, 177);
+}
+
+.products-container {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.products-container span {
+	color: rgb(35, 187, 177);
+}
+
+.about-container {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	padding: 2em;
+}
+
+.about-items {
+	padding: 3em;
+}
+
+.about-items1,
+.about-items2 {
+	padding: 0 3em;
+}
+
+#user-createaccount a {
+	color: white;
+	margin: 1em 0;
+}
+
+div #user-createaccount {
+	color: rgb(56, 173, 177);
+	width: 50%;
+	height: 3em;
+}
+
+.main-createaccount {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 footer {
-	font-size: 0.7em;
+	text-align: center;
+}
+
+.login-form {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input {
 	text-transform: uppercase;
+	font-size: small;
+	letter-spacing: 0.2em;
+	font-family: "Roboto", sans-serif;
+}
+
+input[type="text"],
+input[type="password"],
+input select {
+	width: 100%;
+	padding: 12px 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+select[type="category"] {
+	padding: 0;
+}
+
+input[type="submit"] {
+	width: 100%;
+	background-color: #9a9a9a;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #b6b6b6;
+}
+
+@media only screen and (max-width: 768px) {
+	.mainheader {
+		display: block;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	#login-control {
+		position: relative;
+		align-items: center;
+		right: 0;
+		padding: 1em;
+	}
+
+	.login-form {
+		width: 80%;
+	}
+
+	.about-container {
+		display: grid;
+		grid-template-columns: repeat(1, auto);
+		padding: 2em;
+	}
+
+	.products-container {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.mainheader #logo {
+		margin-right: -7em;
+	}
 }

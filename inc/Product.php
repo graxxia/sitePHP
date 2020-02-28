@@ -34,6 +34,4 @@ class Product{
         return $products;
     }
 
-
-
 }

@@ -1,6 +1,6 @@
 <div id="product-control">
 
-<label>Browse all products<label>
+<label><h4>Browse all products</h4><label>
 <form action="#" method="post">
 <input type="submit" name="submitAll" value="Show me all products!" />
 </form>
@@ -12,7 +12,7 @@
     
 ?>
 
-<label>Browse by category</label>
+<label><h4>Browse by category</h4></label>
 <form action="#" method="post">
 <select name="category">
 <option value="5">Body</option>
@@ -31,7 +31,7 @@ if(isset($_POST['submitCategory'])){
     }
 ?>
 
-<label>Browse by type</label>
+<label><h4>Browse by type</h4></label>
 <form action="#" method="post">
 <select name="type">
 <option value="11">Soap</option>
@@ -55,11 +55,12 @@ if(isset($_POST['submitType'])){
     if($products != null){
       $products =  Product::getAll();
         foreach($products as $p){
-                    echo 'Product name: '.$p['name'];
                     echo '<br>'.'<br>';
-                    echo 'Product description: '.$p['description'];
+                    echo '<strong><span>Product name:</span></strong> '.$p['name'];
                     echo '<br>'.'<br>';
-                    echo 'Price: '.$p['unitPrice'];
+                    echo '<strong><span>Product description:</strong></strong> '.$p['description'];
+                    echo '<br>'.'<br>';
+                    echo '<strong><span>Price:</strong> </strong>'.$p['unitPrice'];
                     echo '<br>'.'<br>';
                     if($p['productTypeID'] == 10){
                         echo "<img src='./img/generic/genericCreams.jpg' width='300px' height='200px' alt='picture of diverse creams' />";
@@ -133,14 +134,10 @@ if(isset($_POST['submitType'])){
                     echo "<img src='./img/generic/genericSoap.jpg' width='300px' height='200px' alt='picture of diverse soaps' />";
                 }
                 echo '<br>'.'<br>';
+                
 
             }
     }
-
- 
-
-
-
 
 ?>
 </div>
