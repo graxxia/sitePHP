@@ -84,12 +84,13 @@ if(isset($_POST['submitType'])){
     if($type != null){
       $productsByType = Product::getAllType($type);  
         foreach($productsByType as $p){
-                echo 'Product name: '.$p['name'];
                 echo '<br>'.'<br>';
-                echo 'Product description: '.$p['description'];
-                echo '<br>'.'<br>';
-                echo 'Price: '.$p['unitPrice'];
-                echo '<br>'.'<br>';
+                    echo '<strong><span>Product name:</span></strong> '.$p['name'];
+                    echo '<br>'.'<br>';
+                    echo '<strong><span>Product description:</strong></strong> '.$p['description'];
+                    echo '<br>'.'<br>';
+                    echo '<strong><span>Price:</strong> </strong>'.$p['unitPrice'];
+                    echo '<br>'.'<br>';
                 if($p['productTypeID'] == 10){
                     echo "<img src='./img/generic/genericCreams.jpg' width='300px' height='200px' alt='picture of diverse creams' />";
                    
@@ -112,12 +113,13 @@ if(isset($_POST['submitType'])){
     if($category != null){
         $productsByCategory = Product::getAllCategory($category);
         foreach($productsByCategory as $p){
-                echo 'Product name: '.$p['name'];
                 echo '<br>'.'<br>';
-                echo 'Product description: '.$p['description'];
-                echo '<br>'.'<br>';
-                echo 'Price: '.$p['unitPrice'];
-                echo '<br>'.'<br>';
+                    echo '<strong><span>Product name:</span></strong> '.$p['name'];
+                    echo '<br>'.'<br>';
+                    echo '<strong><span>Product description:</strong></strong> '.$p['description'];
+                    echo '<br>'.'<br>';
+                    echo '<strong><span>Price:</strong> </strong>'.$p['unitPrice'];
+                    echo '<br>'.'<br>';
                 if($p['productTypeID'] == 10){
                     echo "<img src='./img/generic/genericCreams.jpg' width='300px' height='200px' alt='picture of diverse creams' />";
                    

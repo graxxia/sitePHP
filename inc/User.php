@@ -30,7 +30,7 @@ class User{
         $pdo = DbConn::getPDO();
         //[msg,status true or false]
         if(User::theUser($username)){
-            return ["msg"=>"User <em>$username</em> already exist", "status"=>false];
+            return ["msg"=>"User <em>$username</em> already exist",  "status"=>false];
         }  
         $passwordHash = password_hash($pass, PASSWORD_BCRYPT);
         $salt='';
